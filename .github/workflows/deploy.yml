@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 name: Deploy
 jobs:
   FTP-Deploy-Action:
@@ -16,4 +16,4 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: ./
-          REMOTE_DIR: /デプロイ対象のサイト/public_html/
+          REMOTE_DIR: /noot-inc.com/public_html/
