@@ -6,7 +6,7 @@ name: Deploy
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: ubuntu-latest
+    runs-on: Linux
     steps:
       - uses: actions/checkout@main
       - name: FTP-Deploy-Action
@@ -16,4 +16,4 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: ./
-          REMOTE_DIR: /noot-inc.com/public_html/
+          REMOTE_DIR: /noot-inc.com/public_html/site
